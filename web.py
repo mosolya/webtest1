@@ -3,6 +3,7 @@ import streamlit as st
 if "lista" not in st.session_state:
     st.session_state.lista = ["első", "második", "harmadik"]
 
+
 def hozzair():
     elem =st.session_state["ujelem"]
     st.session_state.lista.append(elem)
