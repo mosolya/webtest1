@@ -3,7 +3,7 @@ import streamlit as st
 if "lista" not in st.session_state:
     st.session_state.lista = ["első", "második", "harmadik"]
 
-
+st.set_page_config(layout="wide")
 def hozzair():
     elem =st.session_state["ujelem"]
     st.session_state.lista.append(elem)
@@ -12,7 +12,7 @@ def hozzair():
 
 st.title("my first webapp")
 st.subheader("ez a subheader")
-
+st.write("Egy sima <b>szöveg</b>", unsafe_allow_html=True)
 for i, x in enumerate(st.session_state.lista):
     chkbox = st.checkbox(x, key=x)
     if chkbox: #is checked
